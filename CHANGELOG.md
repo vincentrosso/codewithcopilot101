@@ -1,0 +1,598 @@
+# Changelog
+
+Versions follow `major.minor.patch`. Default bump is **patch** (typos, wording, small additions). **Minor** for new sections or meaningful content changes. **Major** for restructuring a full day or changing the learning arc.
+
+---
+
+## Copilot edition
+
+### v1.0.0 — 2026-11-18
+- Ported the whole course from codewithai101 to a GitHub Copilot toolset. Per-file history below is inherited from codewithai101 and still describes the original (Claude) edition.
+- **Week 1:** Sublime Text replaced by VS Code, installed with *Chat: Disable AI Features* ticked; `subl` alias → `code` alias. All later `subl` commands → `code`
+- **Weeks 2–3:** claude.ai → Copilot Chat at github.com/copilot (Copilot Free); VS Code's AI stays off so the explain-never-write rule holds
+- **Week 4:** Claude Code (npm install, terminal sessions) → Copilot in VS Code: Ask mode for read-only tours, Agent mode for edits with Keep/Undo and commands with Allow/Skip; ghost-text completions switched off for the whole course. W04D1 and the W04D4 hands-on flow rewritten
+- **Week 7:** Anthropic SDK → GitHub Models via the `openai` SDK (`base_url` = models.github.ai, `openai/gpt-4.1-mini`); API key → fine-grained GitHub token with Models: read-only in `.env` as `GITHUB_MODELS_TOKEN`; cost framing → free-tier rate limits; mocks now fake `response.choices[0].message.content`; W07D4 adds an `os.environ.get` fix so `brief.py` imports cleanly without `.env` (needed by CI in W10D4)
+- **Weeks 8, 10, 11, 12:** requirements, README templates, CI notes and least-privilege callbacks updated for the new token and package
+- **All mentor-review "judgment" exercises:** run in Copilot Ask mode, so the suggestion is judged before anything touches the files
+- **QA track:** Lesson 5 uses browser Copilot; Lesson 6 uses Copilot agent mode
+- **Field notes:** history kept accurate (that day used Claude Code), with Copilot equivalents noted; hands-on uses Copilot agent mode
+- `CLAUDE.md` → `.github/copilot-instructions.md` (with a new toolset section); `.claude/commands/done.md` → `.github/prompts/done.prompt.md`
+
+---
+
+## field/F01.md
+
+### v1.0.0 — 2026-10-14
+- Initial release — Field Notes 1: a phone-first member login for a client's Shopify store (Shopify CLI theme, Lambda members API, Dev Dashboard app + scopes, webhooks, SMS referrals), with a free dev-store hands-on
+
+---
+
+## field/README.md
+
+### v1.0.0 — 2026-10-14
+- Initial release — index for the field-notes track
+
+---
+
+## W01D1.md
+
+### v1.2.0 — 2026-05-04
+- Reframed the journal "what confused me / felt magical" section as "What I don't fully understand" — asks for specific commands or lines instead of vague reflection
+
+### v1.1.0 — 2026-04-30
+- Section 3 expanded to cover both Mac and Windows: Win key as built-in launcher, PowerToys Run as Alt+Space alternative
+
+### v1.0.0
+- Initial release
+
+---
+
+## W01D2.md
+
+### v1.1.0 — 2026-04-30
+- Added section 3: creating a `subl` alias via `~/.zshrc`
+- Renumbered subsequent sections (3–8 → 4–9)
+- Replaced `open -a "Sublime Text"` call in Python section with `subl`
+
+### v1.0.0
+- Initial release
+
+---
+
+## W01D3.md
+
+### v1.1.0 — 2026-05-04
+- Removed "magic" framing from section 4 closer and from the journal reflection prompt; replaced with concrete language ("pick one specific line you executed but couldn't have written from scratch")
+
+### v1.0.0
+- Initial release
+
+---
+
+## W01D4.md
+
+### v1.1.0 — 2026-05-04
+- Friday review checklist no longer references "things that still feel like magic"; uses "lines or concepts you couldn't explain from scratch"
+
+### v1.0.0
+- Initial release
+
+---
+
+## W02D1.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: catch-up on Week 1 leftovers; first Claude session with Rule 1 (explain, not write) and Rule 2 (run everything yourself)
+
+---
+
+## W02D2.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: functions and dictionaries; refactor `fetch_many.py` to extract `fetch_one(url)`
+
+---
+
+## W02D3.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: foundations day — HTTP layers, response anatomy, status codes, Python types, mini-quiz (no AI, no Google)
+
+---
+
+## W02D4.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: richer HTML parsing — meta description, og:title, h1, canonical URL; consistent record shape; tightened Claude rule
+
+---
+
+## W02D5.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: CSV output via DictWriter; sorted results; Week 2 mentor review with Claude-judging twist
+
+---
+
+## W03D1.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: structured `brands.yaml` config; nested loop over brands × pages; aggregated `results.json`
+
+---
+
+## W03D2.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: split into `fetch.py`, `parse.py`, `runner.py`; introduce imports and `if __name__ == "__main__":`
+
+---
+
+## W03D3.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: foundations day on file I/O, context managers, paths (relative vs absolute, `pathlib`), and UTF-8 encoding; no-AI mini-quiz
+
+---
+
+## W03D4.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: `argparse` with `--input`, `--output`, `--limit`, `--verbose`, `--csv`; flat per-page CSV returns
+
+---
+
+## W03D5.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: Week 3 mentor review — pipeline demo, bug hunt, Claude judgment, retrospective journal
+
+---
+
+## W04D1.md
+
+### v1.0.0 — 2026-05-08
+- Initial release: install Node + Claude Code via npm; three new rules (review every diff, never auto-approve a command, ask before committing unclear code); read-only tour of brand-lens; propose-and-reject diff exercise
+
+---
+
+## W04D2.md
+
+### v1.0.0 — 2026-05-08
+- Initial release: Claude Code as a calibration mirror — walk through `runner.py`, `fetch.py`, `parse.py` and compare against own understanding from W03D5 review prep; surface where Claude Code is reliable vs. confidently wrong
+
+---
+
+## W04D3.md
+
+### v1.0.0 — 2026-05-08
+- Initial release: foundations day on reading diffs — `git diff` output anatomy, hunk headers, staged vs unstaged, spotting a bad diff (scope creep, unexpected deletions, renames-without-call-site-updates); no-AI mini-quiz
+
+---
+
+## W04D4.md
+
+### v1.0.0 — 2026-05-08
+- Initial release: first reviewed Claude Code edit — write spec yourself, add `--brand` flag to `runner.py`, review every line of the proposed diff, push back on scope creep, write commit message yourself
+
+---
+
+## W04D5.md
+
+### v1.0.0 — 2026-05-08
+- Initial release: no mentor session — write a list of 10+ specific questions about Claude Code or own code, categorize each (`claude code` / `docs` / `vincent` / `later`); Week 4 retrospective journal
+
+---
+
+## W05D1.md
+
+### v1.0.0 — 2026-05-11
+- Initial release: install `pytest`, create `tests/` directory, first test against `parse_page` with hand-written HTML, AAA pattern (Arrange/Act/Assert), break the code on purpose to see red, fix to see green
+
+---
+
+## W05D2.md
+
+### v1.0.0 — 2026-05-11
+- Initial release: extend `tests/test_parse.py` with edge cases (missing title, missing description, multiple h1s, canonical extraction), introduce `tests/conftest.py` and `@pytest.fixture` for shared HTML setup, framing of "a test is a tiny spec"
+
+---
+
+## W05D3.md
+
+### v1.0.0 — 2026-05-11
+- Initial release: foundations day on testing — what counts as a "unit," pure vs side-effectful functions, the test pyramid (unit/integration/e2e), tests-as-spec, what to do when a test fails (fix code vs fix test), flaky tests; no-AI mini-quiz
+
+---
+
+## W05D4.md
+
+### v1.0.0 — 2026-05-11
+- Initial release: mocking the network — `monkeypatch` + a minimal `FakeResponse` class to substitute `requests.get`, test the happy path (status 200, html body), test the error path (`requests.RequestException` raises → `fetch_one` returns error tuple, proving the W01D4 `try/except` actually works)
+
+---
+
+## W05D5.md
+
+### v1.0.0 — 2026-05-11
+- Initial release: Friday mentor review returns to normal format — demo the test suite, break-and-catch exercise (Vincent introduces a small bug, suite must catch it or Tyler writes the test that would have), Claude-judging twist (ask Claude Code to write a test, judge behavior vs implementation), Week 5 retrospective journal
+
+---
+
+## sidelines/beautifulsoup.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: reference for BeautifulSoup — the tree mental model, vocabulary (Tag, NavigableString, attributes, selectors), the methods Tyler will actually use, parser choices, common pitfalls, quick reference. Cross-links to modules-and-modularity.md.
+
+---
+
+## sidelines/modules-and-modularity.md
+
+### v1.0.0 — 2026-05-04
+- Initial release: how Python's import system works (sys.path, sys.modules, what pip install actually does, your modules vs library modules) plus the design principle of modularity (clear boundaries, replaceability, testability, examples beyond Python). Cross-links to beautifulsoup.md.
+
+---
+
+## sidelines/why-test.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: the motivational "why do unit tests" companion to W05D3's mechanics — the honest "feels like writing the code twice" objection, five grounded reasons (regression alarm, trusting Claude Code's edits, executable documentation, design pressure toward pure functions, speed over manual checking), when *not* to write a test, and a no-AI reflection prompt tied to the W05D5 retro. Cross-links to W05D3.
+
+---
+
+## sidelines/relational-model.md
+
+### v1.0.0 — 2026-06-04
+- Initial release: the formal-theory companion to W06D3, "databases from set theory up," built as three un-paced sittings each with a no-AI drill. Sitting 1 — sets (no order/no duplicates), tuples, domains, the Cartesian product, and the punchline that a table *is* a relation (a subset of a Cartesian product); the set-theory⇄SQL vocabulary table; Codd 1970 / declarative-vs-navigational history. Sitting 2 — functional dependencies (`X → Y`), superkey/candidate/primary keys defined via FDs, the three anomalies (update/insert/delete), normal forms 1NF–3NF (+BCNF named) with the `pages_flat` 3NF-violation worked example, "the key, the whole key, and nothing but the key," and an instinct⇄theorem map. Sitting 3 — relational algebra (σ/π/⋈), a real W06D2 query dissolved into `π(σ(⋈))`, declarative-vs-imperative + the query planner, and where SQL bends the math (bags vs sets/`DISTINCT`, ordered columns, NULL → three-valued Kleene logic as the formal reason `= NULL` returns nothing). Cross-links to W06D3 and assembly.md; light Kubrick/Nadsat + HAL flavor.
+
+---
+
+## sidelines/git-under-the-hood.md
+
+### v1.0.0 — 2026-08-06
+- Initial release: the machine under W10D3's pointer model, built as three un-paced sittings each with a no-AI drill. Sitting 1 (history) — the five questions version control exists to answer; SCCS/RCS per-file deltas + locking as pessimistic concurrency; CVS's whole-project networked repo + optimistic concurrency, and its leaks (non-atomic commits, renames destroy history, branching agony — the origin of "don't branch" folklore); SVN's atomic global revisions and remaining centralization costs; the BitKeeper affair and the April 2005 timeline (self-hosting in 4 days); Linus's six design goals; centralized-vs-distributed table + the two second-order effects (commit stopped being social; the PR workflow is a *product* of distribution). Sitting 2 (internals) — git as a content-addressed key-value store; SHA-1 properties + the `blob 5\0hello` header detail (verified against `git hash-object`) + the SHAttered/SHA-256 note; the four object types walked live via `cat-file -p` commit→tree→blob; snapshots-not-deltas and why dedup answers the storage objection (packfiles as a *storage* detail the model doesn't depend on); the DAG with acyclicity as a cryptographic impossibility; refs and HEAD as literal files; the Merkle chain → tamper-evidence (and the blockchain parallel, four years earlier); the three trees (HEAD/index/working dir) with the command→trees table that demystifies `--soft`/`--mixed`/`--hard` and every `diff` variant; three-way merge + merge base as lowest common ancestor, and rebase's golden rule derived rather than memorized; reachability, garbage, and the 90-day reflog safety net. Sitting 3 (commands) — grouped by problem: looking around (`log --graph/-S/-p`, `show <commit>:<path>`, the two-dot vs three-dot diff, `blame -L`, `grep`, `shortlog`), undo ranked by danger (`restore` → `--amend` → `revert` → `reset` → `clean -nd` → `reflog` as the undo-for-your-undo), moving work (`stash`, `cherry-pick`, `rebase -i`, `switch`, `worktree`), `bisect run pytest -q` as the payoff of the small-commits habit, remotes (`fetch` vs `pull`, what `origin/main` actually is, `--force-with-lease`), housekeeping (`tag`, `rm --cached` as the W06D1 `.gitignore` rule underneath, `check-ignore -v`, the `git lg` alias); closes with a six-command short list. Cross-links to W10D3, assembly.md, relational-model.md, Pro Git ch. 10; light Kubrick (HAL, Strangelove, Hartman on `reset --hard`, Nadsat).
+
+---
+
+## W06D1.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: why a database over flat files; `sqlite3` (built-in); two-table schema (`brands`, `pages`) with PRIMARY KEY / foreign key / NOT NULL / UNIQUE; `init_db`, `insert_brand`, `insert_page` with `?` placeholders (SQL-injection note); `commit()`; read back with the `sqlite3` CLI; `.gitignore` the `.db` file
+
+---
+
+## W06D2.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: querying — `SELECT`/`WHERE`, `=` vs `IS NULL` gotcha, `COUNT`, `ORDER BY`, `GROUP BY` (per-category counts), first `JOIN` using the foreign key; queries from Python via cursor + `fetchall`; the `?`-not-f-string rule restated with the injection example
+
+---
+
+## W06D3.md
+
+### v1.0.1 — 2026-06-04
+- Added a callout in §4 (the "you don't need the formal theory" line) pointing curious readers to the new [relational-model](sidelines/relational-model.md) sideline — the formal math under the normalization instinct
+
+### v1.0.0 — 2026-05-27
+- Initial release: foundations day — a table as a list-of-dicts made strict, primary keys (natural vs surrogate), foreign keys and normalization (store-once-point-everywhere), why not one JSON blob, what `NULL` means (vs `0`/`""`), a note on indexes; no-AI mini-quiz
+
+---
+
+## W06D4.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: the re-run problem (UNIQUE → IntegrityError) and `upsert_page` (`INSERT OR REPLACE`, stamp `fetched_at`); wire the db into `runner.py` (`--db` flag, connection lifecycle); test `db.py` with an in-memory `:memory:` `yield` fixture (callback to W5 fixtures, W05D3 side effects, W05D4 faking); idempotent re-runs
+
+---
+
+## W06D5.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: Friday review — schema + live query demo, idempotent-upsert demo, break-and-catch on `db.py`, Claude-judging a query (checking `IS NOT NULL` and `?`-parameter safety), Week 6 retrospective journal
+
+---
+
+## W07D1.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: first programmatic Claude call — API key from the console, `.env` + `.env.example` (gitignored, key = password), `anthropic` + `python-dotenv`, `client.messages.create` with `model`/`max_tokens`/`messages`, `message.content[0].text`, Haiku for cost; observe non-determinism across two runs (vs pure `parse_page`)
+
+---
+
+## W07D2.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: structured JSON output — `page_fields_for_brand` (cursor.description → dicts), `build_prompt` mapping each W02D4 field (`description`/`h1`/`title`/`og_title`/`canonical`) to a brand-evaluation question, system prompt for JSON-only, `summarize_brand` returns a parsed dict via `json.loads`; flags the unparseable-reply gap for D4
+
+---
+
+## W07D3.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: foundations day — an API as the W02D3 HTTP request/response with a key attached, authentication (key = password, revoke on leak), tokens as the unit of cost/limits/rate-limits, what a model is and isn't (text predictor, non-deterministic, hallucination, sees only the prompt), and the three reasons a real LLM call can't be unit-tested → mock it (W05D4 callback); no-AI mini-quiz
+
+---
+
+## W07D4.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: robust `summarize_brand` returning `(summary, error)` and never raising (two `try/except`: API failure + JSON parse) echoing `fetch_one`; store the brief in the db (`brief` column via `ALTER TABLE`, `set_brief` with `json.dumps`, UPDATE...WHERE); test by mocking `client.messages.create` with `FakeMessage`/`FakeBlock` + `monkeypatch` (W05D4 pattern, new target) — happy/bad-JSON/API-raises paths
+
+---
+
+## W07D5.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: Friday review — demo the full fetch→parse→store→summarize→store loop, the new grounded/generic/invented judgment of a brief against its source data, break-and-catch on `brief.py`, Claude-judging a prompt change for grounding, Week 7 retrospective; bridge to the Week 8 brief-MVP
+
+---
+
+## W08D1.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: brief MVP begins — `jinja2` (`{{ }}` output vs `{% %}` logic), `templates/brief.md`, pure `render_brief(context)` split from side-effectful `write_brief(slug, markdown)` (W05D3 separation), render one brand's stored brief to `briefs/<slug>.md`; `briefs/` gitignored
+
+---
+
+## W08D2.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: `generate_briefs.py` — `build_context` pulls the stored brief (`json.loads`, the round-trip back from W07D4's `json.dumps`) + pages from the db, `generate_all` loops every brand with a `__main__` guard; handle the no-brief brand via the template `{% else %}`; the pretty-vs-true grounding caution; template polish (page descriptions, no-pages case)
+
+---
+
+## W08D3.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: foundations day — separation of concerns as the through-line of the whole project (fetch/parse/db/brief/render, pure vs side-effect, data vs presentation), the brand-lens file tree and code/config/data-output categories, dependencies + reproducibility (`requirements.txt`, pinning, "works on my machine"), the README as front door; no-AI mini-quiz
+
+---
+
+## W08D4.md
+
+### v1.0.0 — 2026-05-27
+- Initial release: test `render_brief` with substring assertions and NO mocking (contrast with W05D4/W07D4 — it's pure); pin `requirements.txt` to direct deps only (why not `pip freeze`); write the project README (what/setup/usage/layout) with the clone-without-asking test
+
+---
+
+## W08D5.md
+
+### v1.1.0 — 2026-06-18
+- Re-pointed the "Looking ahead" section: Week 9 is now the static site (HTML/CSS, view in a browser), not branches/PRs/CI. The branch/PR/CI workflow moved to Week 10 and the AWS deploy to Weeks 11–12 (deploy target changed from a FastAPI server to an S3 static site; FastAPI/Docker deferred to a Course 2). Retitled "making it shareable" → "making it visible."
+
+### v1.0.0 — 2026-05-27
+- Initial release: MVP demo — clean run from an empty db to a `briefs/` folder (three commands), file-tree walkthrough, grounding judgment on the finished/polished brief, break-and-catch on the template/`render.py`, Claude-judging a "Data completeness" template addition, milestone retrospective ("Week 1 me vs now"); bridge to Week 9
+
+---
+
+## W09D1.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Week 9 (static site) begins — markdown brief → HTML page; `templates/brief.html` with the same `{{ }}`/`{% %}` logic over HTML scaffolding; `autoescape` via `select_autoescape` (data-not-code safety); pure `render_brief_html` + side-effectful `write_page(slug, html)` to `site/` (gitignored); `open` to view; the print-shows-tags / browser-draws-page prediction
+
+---
+
+## W09D2.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: the index page + styling — `db.all_brands` helper; `templates/index.html` looping brands into relative `<slug>.html` links with a `{% for %}/{% else %}` empty case; `static/style.css` linked from both templates (`<link rel="stylesheet">`); `render_index`; relative links and the HTML/CSS separation-of-concerns split
+
+---
+
+## W09D3.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: foundations day — the browser as the renderer (who interprets HTML); HTML/CSS/JavaScript and why Brand Lens uses no JS; static vs dynamic and the load-bearing "Brand Lens needs no backend" argument; `file://` vs a served `http://` and why `python -m http.server` exists; absolute vs relative links and portability; no-AI mini-quiz
+
+---
+
+## W09D4.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: `build_site.py` — one command rebuilds the whole `site/` from the db (all brands → context → HTML, plus index, plus `shutil.copy` the stylesheet), runs from empty, reuses W8's `build_context`; preview over `python -m http.server`; test the pure renderers with substring assertions and no mocking (incl. the load-bearing index `href`); the W08D4 purity payoff
+
+---
+
+## W09D5.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Friday review — clean run from empty db to a `localhost`-served site; demo + "static, no backend" narration; grounding judgment on the web page; break-and-catch split into tests-catch vs eyes-only (missing stylesheet copy); Claude-judging a confidence-badge template/CSS change (HTML/CSS separation); Week 9 retrospective; bridge to Week 10 (branches/PRs/CI)
+
+---
+
+## W10D1.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Week 10 begins — why committing straight to `main` is risky (Tyler's own messy history as Exhibit A); a branch as an independent line of work; `git switch -c`, commit on the branch, prove `main` doesn't have it; `git push -u origin`; stop short of the PR; one-branch-per-change
+
+---
+
+## W10D2.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: pull requests — PR as "merge this branch" + a review checkpoint (W4 "review every diff" callback); open a PR (base vs compare), review your own diff (catch stray `site/`/`.DS_Store` files), merge, delete the branch, `git pull` to sync local `main`; the full seven-step branch→PR→merge→sync loop
+
+---
+
+## W10D3.md
+
+### v1.0.1 — 2026-08-06
+- Added a callout at the end of §5 pointing to the new [git-under-the-hood](sidelines/git-under-the-hood.md) sideline — the machine under the day's pointer model; names `git reflog` and `git bisect run pytest -q` as the two commands worth knowing about immediately
+
+### v1.0.0 — 2026-06-18
+- Initial release: foundations day — a commit as a snapshot-with-a-parent; the commit graph; a branch as a pointer (not a copy) and `HEAD`; the diverged-labels picture behind "main doesn't have that commit"; fast-forward vs merge commit (two parents); merge conflicts as git refusing to guess; the three properties (isolation / review-before-merge / parallel work); no-AI mini-quiz
+
+---
+
+## W10D4.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: continuous integration — GitHub Actions; why a secretless, internet-less robot can run the suite (because the network and LLM are mocked, W05D4/W07D4 paying off); write `.github/workflows/ci.yml` (`on`, `runs-on`, `uses` vs `run`, `pip install -r requirements.txt`, `pytest`); ship it via a PR; watch green; deliberately break a test and watch the PR go red
+
+---
+
+## W10D5.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Friday review — branch protection making the green check *required* + blocking direct pushes to `main`; demo a red CI check *disabling* the merge button; break-and-catch via CI (incl. a green-passing gap like a dropped `ORDER BY`); Claude-judging a CI Python-matrix change (judging fit, not saying yes); Week 10 retrospective; bridge to Week 11 (AWS S3)
+
+---
+
+## W11D1.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Week 11 begins — AWS account; why not root (least privilege, the master-key analogy, the `.env`/API-key parallel from W7); an IAM user with S3-only permissions + an access key; install + `aws configure` the AWS CLI (keys land in `~/.aws/`, outside the repo); `aws sts get-caller-identity` proves the secure connection; no repo commit (keys aren't project code)
+
+---
+
+## W11D2.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: a bucket on the internet — `aws s3 mb`; `aws s3 sync site/`; `aws s3 website` (index/error document, why `index.html` is magic); "private by default, public by choice" in two deliberate steps (public-access-block + a read-only `s3:GetObject` bucket policy, `Principal: *`); the website-endpoint URL; http-not-https note; commit `bucket-policy.json` through the branch/PR/CI loop
+
+---
+
+## W11D3.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: foundations day — the cloud as "someone else's computer" and IaaS (static site = renting storage, not a running machine); the account/root/IAM-user/policy security model and least privilege; authentication vs authorization (the key vs the policy; a 403 as "authn ok, authz no"); regions (and where the region shows up in the endpoint); why the site is http and what CloudFront+a certificate would add (Course 2); no-AI mini-quiz
+
+---
+
+## W11D4.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: one-command deploy — `deploy.sh` (shebang, `set -euo pipefail`, build-then-sync, `BUCKET` in one place); the `--delete` flag and the "ghost page" problem; cost awareness + a Billing budget alert; the tear-down off switch (`rm --recursive` then `rb`) learned but not run; ship `deploy.sh` through the loop; note CI runs pytest but not deploy (who/when deploys = Week 12)
+
+---
+
+## W11D5.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Friday review — clean deploy from empty db to a public URL (three commands), demoed on Vincent's own machine; the security narration (IAM user / read-only public / keys in `~/.aws/`); the budget alert + off-switch check; cloud-shaped break-and-catch (403 / stale site that CI can't catch — read the live system, not the test); Claude-judging a `--cache-control` deploy change; "least privilege, twice" (IAM user + bucket policy); Week 11 retrospective; bridge to Week 12
+
+---
+
+## W12D1.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: Week 12 begins — CI vs CD; a key for the robot stored as GitHub Actions encrypted secrets (`${{ secrets.X }}` as a pointer, not a value; the `.env` idea hosted by GitHub); `.github/workflows/deploy.yml` deploying on push to `main` only (`aws-actions/configure-aws-credentials`, build, `s3 sync --delete`); watch a merge auto-publish with nobody running `deploy.sh`
+
+---
+
+## W12D2.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: the guardrail — the gap (deploy fires regardless of test result); combine into one "Test and Deploy" workflow with `deploy` declaring `needs: test` and `if: github.ref == 'refs/heads/main'`; remove the redundant `ci.yml` and re-point branch protection; prove it by trying to ship a red change and watching `deploy` get *skipped*; "can't merge red" vs "can't deploy red"; optional `schedule:` cron
+
+---
+
+## W12D3.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: foundations day — the whole arc as two journeys (Journey 1 = the build pipeline `brands.yaml`→S3; Journey 2 = a visitor's request running *none* of your code, which is what "static" means); what "deployed" actually means (a property of where a copy lives); CI vs CD lived, and why the course order (tests→gate→deploy→automate) was deliberate; the twelve-week map; no-AI synthesis quiz
+
+---
+
+## W12D4.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: the capstone build (dress rehearsal) — clean pipeline run empty db → built site + green suite; ship a real change through the *full* branch→PR→CI→merge→auto-deploy loop, hands off for the robot deploy; finalize the project README for Weeks 9–12 (static site, AWS, CI/CD) against the clone-without-asking test; a Friday pre-flight checklist
+
+---
+
+## W12D5.md
+
+### v1.0.0 — 2026-06-18
+- Initial release: course finale — full demo empty db → robot-deployed public site with whole-arc narration (the two journeys); final grounding judgment on a live public brief; the grand break-and-catch across the whole stack (diagnose which *layer*: code/build/infra/deploy, and which catcher owns it); Claude-judging the finished system's "what to improve next"; the big course retrospective (Week-1-me vs now, the Edit habit, how I work with AI, what I'd build next); Course 2 preview (FastAPI/Docker/dynamic backend/CloudFront)
+
+---
+
+## qa/README.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: QA track overview — the pinned practice app (Toolshop demo at practicesoftwaretesting.com) with seeded accounts and use rules, the `~/dev/qa-lab` deliverable layout, the six-lesson table, and the two threads (judgment in 1–4, Claude against that judgment in 5–6)
+
+---
+
+## qa/QA01.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: QA vs QC vs testing; "you cannot prove software works, you can only sample it"; the six **oracles** (spec, self-consistency, comparable products, user expectation, purpose, standards/law) as the source of every expected result; the lab repo; the app map built before judging; a one-page test plan whose load-bearing sections are "what I'm NOT testing" and "known gaps"; a likelihood×impact risk list that sets the order of everything after it; a predict-before-you-click exercise on quantity-zero
+
+---
+
+## qa/QA02.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: the six fields of a test case and the four rules (must be able to fail, concrete values, one behavior each, preconditions are part of the case); **equivalence partitioning** (one representative per valid partition, each invalid partition separately — they hit different code paths); **boundary value analysis** (below/at/above, plus boundaries in text length, time, collections, money); **decision tables** built from the real payment methods, with pairwise named as the answer to combinatorial explosion; **state transitions** (back button, second tab, logout mid-checkout) and "unspecified — needs a product decision" as a legitimate expected result; ~20-case suite tagged by technique
+
+---
+
+## qa/QA03.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: execution logs with four results — PASS/FAIL/**BLOCKED**/**NOT RUN** — and why hiding the last two is the most damaging thing a tester does; where scripted testing runs out ("a scripted test asks yesterday's question"); session-based exploratory testing with a written charter, a real timer, terse in-flight notes, and the three closing lines; steering heuristics (tours, Goldilocks, CRUD); isolation as craft — reproduce, minimize, vary one thing, get DevTools evidence; the bug report anatomy, severity vs priority, naming the oracle, and reporting facts rather than diagnoses
+
+---
+
+## qa/QA04.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: why regression is structural, not carelessness (callback to W05's silent `None`); smoke/sanity/regression/acceptance as breadth×depth; a ≤10-case smoke suite ordered so the earliest failure kills the run fastest; timing it with a stopwatch and doing the annual-cost arithmetic as the business case for automation; what should never be automated (one-offs, unstable UI, judgment, exploration); flaky tests as training people to ignore failures; risk-based regression selection; the coverage lie (execution ≠ thought); the release-readiness page with accepted risks; the ranked automation shortlist that Lesson 6 builds
+
+---
+
+## qa/QA05.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: Claude as a QA thinking partner — five rules (it can't see the app; a generated case is a hypothesis; you supply facts, it supplies coverage; never file a generated report unedited; judge everything in writing); context-loaded gap-analysis prompt plus the **pre-mortem** reframe ("act as a developer who wrote this badly"); the five verdicts (REAL-new / DUPLICATE / HALLUCINATED / VAGUE / OUT OF SCOPE), a tally, and a measured real-new rate; which *technique* the gaps cluster in as a read on the learner's weakest muscle; every added case must be executed the same day; the thin-note hallucination demo and why the real cost is trust, not the wasted hour
+
+---
+
+## qa/QA06.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: Playwright + pytest harness; the learner writes the first test by hand as the standard to judge the rest against; selector discipline (`data-test` → role/name → text → CSS, never XPath, never `sleep()`); Claude Code writes the rest one case per diff, reviewed against three questions (does the assertion match the manual expected result / could this test fail / where did that selector come from); green→red→green for both failure shapes (false assertion vs missing selector); GitHub Actions on push + daily cron with `--with-deps` and failure artifacts; **"a failing test is a question, not a task"** — the weaken-the-assertion failure mode, demonstrated by contrasting "fix the failing test" with "diagnose without changing assertions"; where to go next (API testing, accessibility, ISTQB vocabulary, *Explore It!*)
+
+---
+
+## README.md
+
+### v1.1.0 — 2026-08-25
+- Added the "QA track (post-course, 6 lessons)" section between Week 12 and Course 2 — six-lesson table, the pinned practice app, the separate `qa-lab` repo, and the AI-free 1–4 / Claude 5–6 split
+
+---
+
+## sidelines/api-testing.md
+
+### v1.0.0 — 2026-08-25
+- Initial release: the QA track's API sideline — the app as two stacked things (the API decides what's true, the UI decides what it looks like); the four arguments for testing one layer down (speed, stability, precision, reach) and the blindness that comes with it; request/response anatomy; runnable `curl` against the Toolshop API (categories as a foreign-key tree, `sort`/`between`, pagination shape, headers); decoding a JWT (with the base64url padding papercut) → the five-minute `exp` boundary and the `role` claim + signature-tampering check; authorization as the highest-yield bug class, with the scope-and-written-permission rule; QA02's techniques reapplied to query params, auth decision tables, and the token lifecycle; what to assert in order (status → shape → the values your case is about → **side effects**, because "returned 200 and did nothing" is invisible); the tester's status-code table incl. 401-vs-403-vs-422 and "a 500 on bad input is always a bug"; the real login-validation judgment call, decided against an oracle; `pytest`+`requests` in CI and the rules-vs-journey split; four ways this layer produces false confidence (green API/broken app, testing your own mock, contract drift, endpoint count as coverage)
+
+---
+
+## qa/QA03.md
+
+### v1.0.1 — 2026-08-25
+- Evidence section (§4) points at the new [api-testing](../sidelines/api-testing.md) sideline — the Network panel as a testable layer, not just a source of bug-report evidence
+
+---
+
+## qa/QA06.md
+
+### v1.0.1 — 2026-08-25
+- "Where to go from here" now opens on the [api-testing](../sidelines/api-testing.md) sideline instead of a bare two-line mention
+
+---
+
+## qa/README.md
+
+### v1.0.1 — 2026-08-25
+- Added a sideline pointer to [api-testing](../sidelines/api-testing.md) under "The two threads"
+
+---
+
+## README.md
+
+### v1.2.0 — 2026-08-25
+- Added `sidelines/api-testing.md` to the sidelines table
