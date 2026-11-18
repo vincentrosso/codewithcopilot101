@@ -6,6 +6,13 @@ Versions follow `major.minor.patch`. Default bump is **patch** (typos, wording, 
 
 ## Copilot edition
 
+### v1.1.0 — 2026-11-18
+- Toolset split: **the Copilot app for business users, the terminal for the real deal**
+- **Weeks 2–3 + QA Lesson 5:** github.com/copilot → the Microsoft 365 Copilot app on the work account, with a note on the enterprise data-protection shield before pasting code
+- **Week 4 on:** VS Code agent mode → GitHub Copilot CLI in the terminal. W04D1, W04D2, W04D4 rebuilt from the original Claude Code lessons (npm install, `copilot`, folder trust, `/login`, approval prompts; never "approve for the rest of the session" or `--allow-all-tools`)
+- VS Code stays the editor but its AI features stay off for the whole course
+- Friday "judgment" exercises, W07, QA Lesson 6, field notes, README and `.github/copilot-instructions.md` updated to Copilot CLI
+
 ### v1.0.0 — 2026-11-18
 - Ported the whole course from codewithai101 to a GitHub Copilot toolset. Per-file history below is inherited from codewithai101 and still describes the original (Claude) edition.
 - **Week 1:** Sublime Text replaced by VS Code, installed with *Chat: Disable AI Features* ticked; `subl` alias → `code` alias. All later `subl` commands → `code`

@@ -2,14 +2,14 @@
 
 A self-paced course teaching software development and AI-assisted programming to a learner with a business background and no prior coding experience — the **GitHub Copilot edition** of [codewithai101](https://github.com/vincentrosso/codewithai101).
 
-Same twelve weeks, same capstone, same rules. What changes is the toolset: one editor (**VS Code**) with **GitHub Copilot** built in, and **GitHub Models** for the LLM calls Brand Lens makes in Week 7 — everything on the GitHub account the learner makes on day one, on free tiers.
+Same twelve weeks, same capstone, same rules. What changes is the toolset, split the way a business works: the **Copilot app** for business users — the chat Tyler already has with his work account — and **GitHub Copilot CLI** in the terminal for the real deal. Brand Lens's own LLM calls in Week 7 go to **GitHub Models**.
 
 | Where AI shows up | Copilot edition |
 |---|---|
-| Week 1 (AI-free) | VS Code installed with **Chat: Disable AI Features** ticked |
-| Weeks 2–3: explain, never write | Copilot Chat in the browser at **github.com/copilot** (Copilot Free); VS Code's AI stays off |
-| Week 4 on: an assistant with hands | **Copilot agent mode** in VS Code — Ask mode for read-only, Agent mode for edits (Keep / Undo) and commands (Allow / Skip). Ghost-text completions stay **off** all course |
-| Week 7: an LLM inside the code | **GitHub Models** via the `openai` Python package, a fine-grained token with Models: read-only, in `.env` |
+| Week 1 (AI-free) | VS Code as the editor, installed with **Chat: Disable AI Features** ticked — and it stays ticked all course. Copilot never writes in the editor |
+| Weeks 2–3: explain, never write | The **Microsoft 365 Copilot app**, signed in with the work account (enterprise data protection on) |
+| Week 4 on: an assistant with hands | **GitHub Copilot CLI** (`npm install -g @github/copilot`, then `copilot`) in Ghostty — diffs shown before writing, approval before every command; never "approve for the rest of the session," never `--allow-all-tools`. Needs a Copilot plan on the GitHub account (e.g. a seat on NIT's Copilot Business) |
+| Week 7: an LLM inside the code | **GitHub Models** via the `openai` Python package, a fine-grained GitHub token with Models: read-only, in `.env` |
 
 ## Format
 
@@ -31,7 +31,7 @@ Week 1 is intentionally **AI-free**. The goal is to build the muscle that lets t
 
 ## Week 2
 
-Copilot (browser, github.com/copilot) comes online — under two strict rules: ask Copilot to *explain*, never to *write*; run everything yourself. VS Code's AI features stay off, so nothing finishes a line for you. The week includes a foundations day mid-week to formalize the mental model behind Week 1's patterns.
+Copilot comes online in the **Microsoft 365 Copilot app** — the business-user Copilot, on the work account — under two strict rules: ask Copilot to *explain*, never to *write*; run everything yourself. VS Code's AI features stay off, so nothing finishes a line for you. The week includes a foundations day mid-week to formalize the mental model behind Week 1's patterns.
 
 | Day | Focus |
 |-----|-------|
@@ -55,11 +55,12 @@ Move from a flat URL list to a structured `brands.yaml` config; split the script
 
 ## Week 4
 
-Tyler graduates from Copilot in a browser tab to **Copilot agent mode in VS Code** — the same Copilot, but with read access to the brand-lens repo, the ability to edit files, and the ability to run commands. Ghost-text completions stay switched off (they skip review entirely). The leap is bigger than Week 2's, so the rules tighten rather than loosen: review every diff before pressing Keep; never Allow a command you can't explain; if Copilot edits a line you don't fully understand, ask it to explain that line *before* you commit. Foundations day on diffs. No Vincent session this Friday — instead, Tyler writes a list of specific questions he can't answer yet about Copilot or his own code.
+Tyler graduates from the Copilot app to **GitHub Copilot CLI** — Copilot in the terminal, with read access to the brand-lens repo, the ability to edit files, and the ability to run commands. The leap is bigger than Week 2's, so the rules tighten rather than loosen: review every diff before accepting; never auto-approve a command you can't explain; if Copilot edits a line you don't fully understand, ask it to explain that line *before* you commit. Foundations day on diffs. No Vincent session this Friday — instead, Tyler writes a list of specific questions he can't answer yet about Copilot or his own code.
 
 | Day | Focus |
 |-----|-------|
-| [Week 4, Day 1](W04D1.md) | Switch Copilot on in VS Code (completions off); Ask vs Agent mode; new rules; read-only tour |
+| [Week 4, Day 1](W04D1.md) | Install Node + Copilot CLI; log in; first session; new rules; read-only tour |
+
 | [Week 4, Day 2](W04D2.md) | Copilot as a mirror — explain `runner.py`, `fetch.py`, `parse.py` |
 | [Week 4, Day 3](W04D3.md) | Foundations: reading diffs — no code, no AI, mini-quiz |
 | [Week 4, Day 4](W04D4.md) | First reviewed edit: add `--brand` flag to `runner.py` |

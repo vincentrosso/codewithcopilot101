@@ -1,6 +1,6 @@
 # Field Notes
 
-Case studies from real NIT America working days, written for someone who has finished the twelve weeks and the QA track. Each one is a single day or a single build, with the decisions left in: what was asked, what the vendor would and would not allow, where the code ended up living and why, what broke, and how the AI coding agent was actually used along the way (the case studies were worked with Claude Code; each note maps the habits onto Copilot agent mode).
+Case studies from real NIT America working days, written for someone who has finished the twelve weeks and the QA track. Each one is a single day or a single build, with the decisions left in: what was asked, what the vendor would and would not allow, where the code ended up living and why, what broke, and how the AI coding agent was actually used along the way (the case studies were worked with Claude Code; each note maps the habits onto Copilot CLI).
 
 They are not paced and they do not advance Brand Lens. Read one when the topic comes up at work, or when you want to see the course's habits — diff review, tests first, secrets in the shell, a human on the production button — applied under real constraints.
 

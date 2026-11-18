@@ -1,6 +1,6 @@
 # Copilot instructions
 
-This file provides guidance to GitHub Copilot (chat and agent mode) when working in this repository.
+This file provides guidance to GitHub Copilot (Copilot CLI and other Copilot agents) when working in this repository.
 
 ## What This Repo Is
 
@@ -28,7 +28,7 @@ Sidelines are kebab-case `.md` files in `sidelines/`, each linked from the READM
 
 `qa/QA01.md`–`qa/QA06.md` is a six-lesson post-course module on quality assurance, assuming all twelve weeks (pytest, git, PRs, CI, diff review). Same lesson format as a course day. Two constraints to preserve when editing:
 
-- **Lessons 1–4 are AI-free**, on the Week 1 principle — the learner can't judge Copilot's test cases in Lesson 5 without having written his own. Lesson 5 is browser Copilot (thinking partner: gap analysis, pre-mortems, critique); Lesson 6 is Copilot (writing Playwright tests, CI).
+- **Lessons 1–4 are AI-free**, on the Week 1 principle — the learner can't judge Copilot's test cases in Lesson 5 without having written his own. Lesson 5 is the Copilot app (thinking partner: gap analysis, pre-mortems, critique); Lesson 6 is Copilot CLI (writing Playwright tests, CI).
 - **One pinned practice app**: the Toolshop demo at `practicesoftwaretesting.com` (UI + an API at `api.practicesoftwaretesting.com`, seeded `customer@`/`admin@` accounts, password `welcome01`). Don't swap it for a generic "app of your choice" — concreteness is the point. Deliverables land in a separate repo (`~/dev/qa-lab`), never in `brand-lens`.
 
 ## Field Notes
@@ -37,13 +37,16 @@ Sidelines are kebab-case `.md` files in `sidelines/`, each linked from the READM
 
 ## The Copilot toolset (keep lessons consistent with this)
 
-- **Editor:** VS Code, from W01D1. Week 1 ticks **Chat: Disable AI Features**; it stays ticked through Week 3.
-- **Weeks 2–3:** Copilot Chat in the browser at `github.com/copilot` (Copilot Free). Explain-only; the learner types every line.
-- **Week 4 on:** Copilot in VS Code. **Ask** mode = read-only; **Agent** mode = edits (reviewed with Keep / Undo) and terminal commands (Allow / Skip). Inline ghost-text completions stay **off** for the whole course (`"github.copilot.enable": { "*": false }`) — they bypass diff review. Never suggest "always allow" / auto-approve.
-- **Mentor-review "judgment" exercises** use Ask mode, so Copilot proposes and the learner judges, without files changing.
+The split is **the Copilot app for business users, the terminal for the real deal.**
+
+- **Editor:** VS Code, from W01D1, with **Chat: Disable AI Features** ticked for the whole course. Copilot never lives in the editor (no ghost-text completions, no editor chat).
+- **Weeks 2–3, and QA Lesson 5:** the **Microsoft 365 Copilot app**, signed in with the learner's work account (look for the enterprise data protection shield). Explain-only; the learner types every line. It never sees the repo.
+- **Week 4 on:** **GitHub Copilot CLI** in the terminal — `npm install -g @github/copilot`, run `copilot` inside the repo, trust the folder, `/login` with GitHub. It shows diffs before writing and asks before commands. Never suggest "approve for the rest of the session" or `--allow-all-tools`. Requires a Copilot plan on the GitHub account (e.g. NIT's Copilot Business).
+- **Mentor-review "judgment" exercises** open `copilot`, ask for a diff without applying, and the learner answers **No** at any write prompt until they've judged it.
 - **Week 7 LLM calls:** GitHub Models through the `openai` SDK — `base_url="https://models.github.ai/inference"`, model `openai/gpt-4.1-mini`, token in `.env` as `GITHUB_MODELS_TOKEN` (a fine-grained PAT with Models: read-only). Free tier = rate limits, not a bill. `brief.py` reads the token with `os.environ.get(..., "not-set")` so tests and CI can import it with no `.env`. Mocks target `client.chat.completions.create` and fake `response.choices[0].message.content`.
 - Keep the two AIs distinct in prose: **Copilot** is the learner's assistant; **the model** (GitHub Models) is what Brand Lens's code calls.
-- **Field notes** were worked with Claude Code in real life. Keep that history accurate and map each habit onto Copilot rather than rewriting what happened.
+- **Field notes** were worked with Claude Code in real life. Keep that history accurate and map each habit onto Copilot CLI rather than rewriting what happened.
+
 
 ## Pedagogical Constraints
 
