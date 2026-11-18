@@ -4,6 +4,20 @@ Versions follow `major.minor.patch`. Default bump is **patch** (typos, wording, 
 
 ---
 
+## business/B01.md
+
+### v1.0.0 — 2026-11-18
+- Initial release — Copilot for Business: a two-hour, no-code overview of the Microsoft 365 Copilot app for business users
+
+---
+
+## business/README.md
+
+### v1.0.0 — 2026-11-18
+- Initial release — overview page for the business session
+
+---
+
 ## Copilot edition
 
 ### v1.2.0 — 2026-11-18

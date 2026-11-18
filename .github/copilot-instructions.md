@@ -16,6 +16,7 @@ README.md          — course overview, format, full week-by-week table, sidelin
 CHANGELOG.md       — per-file version history (semver; default bump = patch)
 .github/prompts/   — reusable Copilot prompt files (e.g. /done: stage, commit, push)
 sidelines/         — reference material outside the day-by-day flow (read when curious, not paced)
+business/          — two-hour no-code Copilot overview for business users (B01 + README)
 qa/                — post-course QA track: QA01–QA06 + its own README (see below)
 field/             — post-course field notes: F01… + its own README (see below)
 ```

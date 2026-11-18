@@ -18,6 +18,14 @@ Same twelve weeks, same capstone, same rules. What changes is the toolset, split
 - **Structure:** daily applied work on a capstone project, parallel foundations track (CS basics, formal logic, algorithms), twice-weekly mentor review
 - **Capstone:** *Brand Lens* — a research tool that helps Korean brands evaluate their US market presence using web scraping, structured data, and LLM-generated briefs
 
+## Copilot for Business (two-hour overview)
+
+Not a coder? Start here instead. A single two-hour, no-code session for business users of the **Microsoft 365 Copilot app**: writing prompts that work (goal, context, format, audience); drafting and summarizing real email, documents and meetings; catching hallucinated statistics, quotes and action-item owners; checking Copilot's numbers by hand; and what never goes into it. Practised on your own work. Overview in [business/README.md](business/README.md).
+
+| Session | Focus |
+|---------|-------|
+| [Copilot for Business](business/B01.md) | Setup + the data-protection shield; what Copilot is (a text predictor); prompt anatomy; email, documents, meeting notes on real work; catching it being wrong; tables and numbers; the paid licence and GitHub Copilot in context; your five rules |
+
 ## Week 1
 
 Week 1 is intentionally **AI-free**. The goal is to build the muscle that lets the learner evaluate AI output later — reading errors, navigating the terminal, understanding what each line of code does. Google and Stack Overflow are encouraged; AI assistants come online in Week 2. VS Code ships with Copilot built in, so day one switches its AI features off.
