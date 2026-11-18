@@ -6,6 +6,11 @@ Versions follow `major.minor.patch`. Default bump is **patch** (typos, wording, 
 
 ## Copilot edition
 
+### v1.2.0 — 2026-11-18
+- Learner is now **Shawna** (was Tyler): README, examples (`greet("Shawna")`, `git config`, `/Users/shawna/...`, bucket `brand-lens-shawna-2026`), QA template author line
+- Removed Tyler-specific history: W10D1's commit-log example is now generic ("odds are..."), QA06's "you've been bitten by this before" UTC aside reworded
+- README and instructions avoid pronouns for the learner
+
 ### v1.1.0 — 2026-11-18
 - Toolset split: **the Copilot app for business users, the terminal for the real deal**
 - **Weeks 2–3 + QA Lesson 5:** github.com/copilot → the Microsoft 365 Copilot app on the work account, with a note on the enterprise data-protection shield before pasting code

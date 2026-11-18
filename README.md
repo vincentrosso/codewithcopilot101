@@ -2,7 +2,7 @@
 
 A self-paced course teaching software development and AI-assisted programming to a learner with a business background and no prior coding experience — the **GitHub Copilot edition** of [codewithai101](https://github.com/vincentrosso/codewithai101).
 
-Same twelve weeks, same capstone, same rules. What changes is the toolset, split the way a business works: the **Copilot app** for business users — the chat Tyler already has with his work account — and **GitHub Copilot CLI** in the terminal for the real deal. Brand Lens's own LLM calls in Week 7 go to **GitHub Models**.
+Same twelve weeks, same capstone, same rules. What changes is the toolset, split the way a business works: the **Copilot app** for business users — the chat Shawna already has on the work account — and **GitHub Copilot CLI** in the terminal for the real deal. Brand Lens's own LLM calls in Week 7 go to **GitHub Models**.
 
 | Where AI shows up | Copilot edition |
 |---|---|
@@ -55,7 +55,7 @@ Move from a flat URL list to a structured `brands.yaml` config; split the script
 
 ## Week 4
 
-Tyler graduates from the Copilot app to **GitHub Copilot CLI** — Copilot in the terminal, with read access to the brand-lens repo, the ability to edit files, and the ability to run commands. The leap is bigger than Week 2's, so the rules tighten rather than loosen: review every diff before accepting; never auto-approve a command you can't explain; if Copilot edits a line you don't fully understand, ask it to explain that line *before* you commit. Foundations day on diffs. No Vincent session this Friday — instead, Tyler writes a list of specific questions he can't answer yet about Copilot or his own code.
+Shawna graduates from the Copilot app to **GitHub Copilot CLI** — Copilot in the terminal, with read access to the brand-lens repo, the ability to edit files, and the ability to run commands. The leap is bigger than Week 2's, so the rules tighten rather than loosen: review every diff before accepting; never auto-approve a command you can't explain; if Copilot edits a line you don't fully understand, ask it to explain that line *before* you commit. Foundations day on diffs. No Vincent session this Friday — instead, Shawna writes a list of specific questions he can't answer yet about Copilot or his own code.
 
 | Day | Focus |
 |-----|-------|
@@ -68,7 +68,7 @@ Tyler graduates from the Copilot app to **GitHub Copilot CLI** — Copilot in th
 
 ## Week 5
 
-Tests enter the project. With Copilot now editing real files, Tyler needs a safety net that runs in under a second and tells him exactly when a behavior broke. The week walks from a first `pytest` test against `parse_page`, through fixtures and the test-pyramid mental model, to mocking `requests.get` so `fetch.py` can be tested without the live internet. Friday returns to the normal mentor review format — Vincent introduces a small break and the suite has to catch it.
+Tests enter the project. With Copilot now editing real files, Shawna needs a safety net that runs in under a second and says exactly when a behavior broke. The week walks from a first `pytest` test against `parse_page`, through fixtures and the test-pyramid mental model, to mocking `requests.get` so `fetch.py` can be tested without the live internet. Friday returns to the normal mentor review format — Vincent introduces a small break and the suite has to catch it.
 
 | Day | Focus |
 |-----|-------|
@@ -80,7 +80,7 @@ Tests enter the project. With Copilot now editing real files, Tyler needs a safe
 
 ## Week 6
 
-CSV and JSON files give way to a real database. Tyler moves the pipeline onto SQLite (built into Python, nothing to install), with a two-table schema (`brands` and `pages`) wired by a foreign key. Raw SQL — `SELECT`, `WHERE`, `COUNT`, `GROUP BY`, `JOIN`, no ORM — turns "how many pages have a meta description?" into a one-line query. The pipeline learns to write to the database with an idempotent upsert (re-runs refresh rows instead of duplicating), and the db layer gets tested against an in-memory database — the Week 5 fixture idea, reused.
+CSV and JSON files give way to a real database. Shawna moves the pipeline onto SQLite (built into Python, nothing to install), with a two-table schema (`brands` and `pages`) wired by a foreign key. Raw SQL — `SELECT`, `WHERE`, `COUNT`, `GROUP BY`, `JOIN`, no ORM — turns "how many pages have a meta description?" into a one-line query. The pipeline learns to write to the database with an idempotent upsert (re-runs refresh rows instead of duplicating), and the db layer gets tested against an in-memory database — the Week 5 fixture idea, reused.
 
 | Day | Focus |
 |-----|-------|
@@ -92,7 +92,7 @@ CSV and JSON files give way to a real database. Tyler moves the pipeline onto SQ
 
 ## Week 7
 
-AI moves from a tool Tyler *talks to* into a library his *code calls*. The week covers **GitHub Models** through the `openai` SDK, a least-privilege access token in a gitignored `.env`, free-tier rate limits, structured JSON output (not prose) built from the W02D4 fields — each field finally tied to a concrete brand-evaluation question — and storing the resulting brief in the database. The LLM call is wrapped so it never crashes the run (the `fetch_one` contract again) and mocked in tests so the suite stays fast, offline, and free (the W05D4 technique, new target). By Friday Tyler is judging whether the model's brief is *grounded* in the data or hallucinated.
+AI moves from a tool Shawna *talks to* into a library Shawna's *code calls*. The week covers **GitHub Models** through the `openai` SDK, a least-privilege access token in a gitignored `.env`, free-tier rate limits, structured JSON output (not prose) built from the W02D4 fields — each field finally tied to a concrete brand-evaluation question — and storing the resulting brief in the database. The LLM call is wrapped so it never crashes the run (the `fetch_one` contract again) and mocked in tests so the suite stays fast, offline, and free (the W05D4 technique, new target). By Friday Shawna is judging whether the model's brief is *grounded* in the data or hallucinated.
 
 | Day | Focus |
 |-----|-------|
@@ -104,7 +104,7 @@ AI moves from a tool Tyler *talks to* into a library his *code calls*. The week 
 
 ## Week 8
 
-The brief MVP. Everything Brand Lens produces has lived in a database where only a SQL query could see it; this week turns it into a readable per-brand document. Tyler learns `jinja2` templates (separating *how a brief looks* from *the data*), renders one markdown file per brand into a `briefs/` directory, and handles the brand with no brief yet. The foundations day names the principle that's been guiding the whole project — separation of concerns — and covers what makes a pile of files a *project*: layout, dependencies, reproducibility. Then the rendering gets tested (trivially, because it's pure), `requirements.txt` gets pinned, and the project README gets written. Friday is the MVP demo — a clean run from an empty database to a folder of briefs.
+The brief MVP. Everything Brand Lens produces has lived in a database where only a SQL query could see it; this week turns it into a readable per-brand document. Shawna learns `jinja2` templates (separating *how a brief looks* from *the data*), renders one markdown file per brand into a `briefs/` directory, and handles the brand with no brief yet. The foundations day names the principle that's been guiding the whole project — separation of concerns — and covers what makes a pile of files a *project*: layout, dependencies, reproducibility. Then the rendering gets tested (trivially, because it's pure), `requirements.txt` gets pinned, and the project README gets written. Friday is the MVP demo — a clean run from an empty database to a folder of briefs.
 
 | Day | Focus |
 |-----|-------|
@@ -116,7 +116,7 @@ The brief MVP. Everything Brand Lens produces has lived in a database where only
 
 ## Week 9 — Brand Lens goes live (static site)
 
-The briefs stop being files only a SQL query can see and become a real site Tyler opens in a browser. Brand Lens has **no runtime backend** — it's a batch pipeline producing pre-computed documents — so the site is static HTML rendered from the same `jinja2` templates as Week 8, viewed locally with `python -m http.server`. This is the re-engagement week after the abstract data weeks: all of it visible, no server concept required.
+The briefs stop being files only a SQL query can see and become a real site Shawna opens in a browser. Brand Lens has **no runtime backend** — it's a batch pipeline producing pre-computed documents — so the site is static HTML rendered from the same `jinja2` templates as Week 8, viewed locally with `python -m http.server`. This is the re-engagement week after the abstract data weeks: all of it visible, no server concept required.
 
 | Day | Focus |
 |-----|-------|
@@ -128,11 +128,11 @@ The briefs stop being files only a SQL query can see and become a real site Tyle
 
 ## Week 10 — Branches, PRs, and the gate (CI)
 
-Now that Brand Lens is visible, the plumbing — motivated by Tyler's own evidence: duplicate, misnumbered commits straight to `main`. A git branch/PR workflow first (he commits to `main` today), then GitHub Actions runs `pytest` on every push, then branch protection makes a green suite *required*. The literal payoff of Weeks 5–9's tests and the [why-test](sidelines/why-test.md) sideline: the suite becomes the merge gate.
+Now that Brand Lens is visible, the plumbing — motivated by the learner's own commit log: nine weeks of commits straight to `main`, usually with duplicates and out-of-order day numbers. A git branch/PR workflow first (everything goes to `main` until now), then GitHub Actions runs `pytest` on every push, then branch protection makes a green suite *required*. The literal payoff of Weeks 5–9's tests and the [why-test](sidelines/why-test.md) sideline: the suite becomes the merge gate.
 
 | Day | Focus |
 |-----|-------|
-| [Week 10, Day 1](W10D1.md) | The problem with committing to `main` (his own history as the cautionary tale); feature branches: `git switch -c`, change on a branch, push it |
+| [Week 10, Day 1](W10D1.md) | The problem with committing to `main` (your own history as the cautionary tale); feature branches: `git switch -c`, change on a branch, push it |
 | [Week 10, Day 2](W10D2.md) | Pull requests: open a PR on GitHub, review your own diff, merge, delete the branch — the PR as the review checkpoint (callback to W4's "review every diff") |
 | [Week 10, Day 3](W10D3.md) | Foundations: a branch is a pointer to a commit; the history graph; merge; what a PR is socially and technically; why teams don't push to `main` — no code, no AI, mini-quiz |
 | [Week 10, Day 4](W10D4.md) | CI: write `.github/workflows/ci.yml` to run `pytest` on every push/PR; watch it pass; break a test → the red ✗ on the PR |
@@ -140,7 +140,7 @@ Now that Brand Lens is visible, the plumbing — motivated by Tyler's own eviden
 
 ## Week 11 — Deploy to S3 (live on the internet)
 
-The static site goes public on AWS S3 — the simplest possible deploy, and the stack Tyler will actually ship to at NIT. AWS account, an IAM user (not root), the AWS CLI configured with credentials kept secret the W7 way, an S3 bucket with static website hosting, `aws s3 sync` → a public URL. Framed throughout as "this is how your code ships at NIT," not generic cloud.
+The static site goes public on AWS S3 — the simplest possible deploy, and the stack Shawna will actually ship to at NIT. AWS account, an IAM user (not root), the AWS CLI configured with credentials kept secret the W7 way, an S3 bucket with static website hosting, `aws s3 sync` → a public URL. Framed throughout as "this is how your code ships at NIT," not generic cloud.
 
 | Day | Focus |
 |-----|-------|
@@ -172,7 +172,8 @@ A short module that flips the chair around: instead of building Brand Lens, you 
 | [QA 2](qa/QA02.md) | Test design: equivalence partitioning, boundary values, decision tables, state transitions - a ~20-case suite, each case tagged with its technique |
 | [QA 3](qa/QA03.md) | Execution (PASS/FAIL/**BLOCKED**/**NOT RUN**), a timed exploratory session with a charter, isolating and minimizing a bug, the bug report - severity vs priority, actual vs expected, naming the oracle |
 | [QA 4](qa/QA04.md) | Regression levels, a 10-case smoke suite timed with a stopwatch, the annual-cost arithmetic, flakiness, why coverage metrics mislead, release readiness, the automation shortlist |
-| [QA 5](qa/QA05.md) | **Copilot as a thinking partner** - gap analysis on his own suite, judged suggestion-by-suggestion with a measured real-new rate; the pre-mortem prompt; a deliberate fabricated-bug-report demo |
+| [QA 5](qa/QA05.md) | **Copilot as a thinking partner** - gap analysis on your own suite
+, judged suggestion-by-suggestion with a measured real-new rate; the pre-mortem prompt; a deliberate fabricated-bug-report demo |
 | [QA 6](qa/QA06.md) | **Copilot as a QA engineer** - Playwright smoke tests reviewed diff-by-diff, selector discipline, green->red->green, Actions on push + a daily cron, and "a failing test is a question, not a task" |
 
 ## Field notes (case studies from real work)

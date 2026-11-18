@@ -28,7 +28,7 @@ Sidelines are kebab-case `.md` files in `sidelines/`, each linked from the READM
 
 `qa/QA01.md`–`qa/QA06.md` is a six-lesson post-course module on quality assurance, assuming all twelve weeks (pytest, git, PRs, CI, diff review). Same lesson format as a course day. Two constraints to preserve when editing:
 
-- **Lessons 1–4 are AI-free**, on the Week 1 principle — the learner can't judge Copilot's test cases in Lesson 5 without having written his own. Lesson 5 is the Copilot app (thinking partner: gap analysis, pre-mortems, critique); Lesson 6 is Copilot CLI (writing Playwright tests, CI).
+- **Lessons 1–4 are AI-free**, on the Week 1 principle — the learner can't judge Copilot's test cases in Lesson 5 without having written their own. Lesson 5 is the Copilot app (thinking partner: gap analysis, pre-mortems, critique); Lesson 6 is Copilot CLI (writing Playwright tests, CI).
 - **One pinned practice app**: the Toolshop demo at `practicesoftwaretesting.com` (UI + an API at `api.practicesoftwaretesting.com`, seeded `customer@`/`admin@` accounts, password `welcome01`). Don't swap it for a generic "app of your choice" — concreteness is the point. Deliverables land in a separate repo (`~/dev/qa-lab`), never in `brand-lens`.
 
 ## Field Notes

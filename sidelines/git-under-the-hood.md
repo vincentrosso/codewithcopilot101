@@ -216,8 +216,8 @@ git cat-file -p HEAD
 ```
 tree 63d1aa9e18101665488a1760f26ce9b5ebb5443d
 parent 1aaeba0badc49d9b3f2744d3cef68e1abceeed15
-author Tyler Xu <you@example.com> 1783524118 -0700
-committer Tyler Xu <you@example.com> 1783524118 -0700
+author Shawna <you@example.com> 1783524118 -0700
+committer Shawna <you@example.com> 1783524118 -0700
 
 add render.py: brand brief to HTML
 ```
@@ -422,7 +422,7 @@ git log --oneline -10                        # last ten, compact
 git log -p parse.py                          # every change ever made to one file, with diffs
 git log --stat                               # which files changed, how many lines each
 git log -S"fetch_page"                       # the "pickaxe": commits where that STRING's count changed
-git log --since="2 weeks ago" --author=Tyler
+git log --since="2 weeks ago" --author=Shawna
 git log main..add-footer                     # commits on the branch that main doesn't have
 ```
 

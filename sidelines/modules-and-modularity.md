@@ -59,9 +59,9 @@ You'll see something like:
 
 ```
                                                 # current directory (empty string)
-/Users/tyler/dev/brand-lens
+/Users/shawna/dev/brand-lens
 /opt/homebrew/Cellar/python@3.12/.../lib/python3.12
-/Users/tyler/dev/brand-lens/venv/lib/python3.12/site-packages
+/Users/shawna/dev/brand-lens/venv/lib/python3.12/site-packages
 ```
 
 Python checks each of these directories *in order*. The first match wins. That's why `from fetch import fetch_one` works — `fetch.py` lives in your project directory, and the project directory is on `sys.path` when you run `python3 runner.py` from there.
